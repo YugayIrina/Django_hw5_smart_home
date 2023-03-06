@@ -10,7 +10,8 @@ class Sensor(models.Model):
 
     class Meta:
         ordering = ['-id']
-
+    def __str__(self):
+        return self.name
 
 class Measurement(models.Model):
     sensor = models.ForeignKey(Sensor, on_delete=models.CASCADE, related_name='measurements')

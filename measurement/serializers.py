@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 # TODO: опишите необходимые сериализаторы
-from measurement.models import Measurement, Sensor
+from measurement.models import Measu
 
 
 class MeasurementSerializer(serializers.ModelSerializer):

@@ -1,11 +1,10 @@
 from django.urls import path
 
-from measurement.views import CreateAPIView, ListCreateAPIView, RetrieveUpdateAPIView, ListView
-
+from . import views
 urlpatterns = [
     # TODO: зарегистрируйте необходимые маршруты
-    path('sensors/', CreateAPIView.as_view()),
-    path('sensors/<pk>/', RetrieveUpdateAPIView.as_view()),
-    path('list/', ListView.as_view()),
-    path('measurements/', ListCreateAPIView.as_view()),
+    path('sensors/', views.ListCreateSensorView.as_view()),
+    path('sensors/<pk>/', views.RetriveUpdateSensorView.as_view()),
+    path('list/', views.ListSensorsView.as_view()),
+    path('measurements/', views.ListCreateMeasurementView.as_view()),
 ]
